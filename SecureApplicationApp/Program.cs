@@ -60,7 +60,6 @@ namespace SecureAuthSystem
             Console.Write("Enter email: ");
             string email = Console.ReadLine().ToLower();
 
-            // Check if email already exists
             if (File.Exists("users.txt"))
             {
                 string[] users = File.ReadAllLines("users.txt");
@@ -79,7 +78,6 @@ namespace SecureAuthSystem
             Console.Write("Enter password: ");
             string password = Console.ReadLine();
 
-            // Generate RSA key pair
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048))
             {
                 try
@@ -87,15 +85,11 @@ namespace SecureAuthSystem
                     string publicKey = rsa.ToXmlString(false);
                     string privateKey = rsa.ToXmlString(true);
 
-                    // Hash the password
                     string hashedPassword = HashPassword(password);
 
-                    // Save user data
                     string userData = $"{name}|{email}|{hashedPassword}|{publicKey}|{privateKey}";
 
                     File.AppendAllText("users.txt", userData + Environment.NewLine);
-
-                    // Create user's encrypted text file
                     File.Create($"{email}_encrypted.txt").Close();
 
                     Console.WriteLine("Registration successful! Press any key to continue...");
@@ -135,7 +129,6 @@ namespace SecureAuthSystem
                             Console.WriteLine("Login successful! Press any key to continue...");
                             Console.ReadKey();
 
-                            // Return user object
                             return new User
                             {
                                 Name = parts[0],
@@ -179,10 +172,8 @@ namespace SecureAuthSystem
 
                         string newHash = HashPassword(newPassword);
 
-                        // Reconstruct user data with new password
                         string newUserData = $"{parts[0]}|{parts[1]}|{newHash}";
 
-                        // Add keys if they exist
                         if (parts.Length > 3) newUserData += $"|{parts[3]}";
                         if (parts.Length > 4) newUserData += $"|{parts[4]}";
 
@@ -268,10 +259,40 @@ namespace SecureAuthSystem
 
                     string encryptedHex = BitConverter.ToString(encryptedData).Replace("-", "");
 
-                    // Save encrypted text to user's file
-                    File.AppendAllText($"{user.Email}_encrypted.txt", encryptedHex + Environment.NewLine);
+                    string userFile = $"{user.Email}_encrypted.txt";
 
-                    Console.WriteLine("Text encrypted and saved successfully!");
+                    bool fileExists = File.Exists(userFile) && new FileInfo(userFile).Length > 0;
+
+                    if (fileExists)
+                    {
+                        Console.WriteLine("Encrypted text file already contains data.");
+                        Console.WriteLine("1. Overwrite existing content");
+                        Console.WriteLine("2. Append to existing content");
+                        Console.Write("Select an option: ");
+
+                        string option = Console.ReadLine();
+
+                        if (option == "1")
+                        {
+                            File.WriteAllText(userFile, encryptedHex + Environment.NewLine);
+                            Console.WriteLine("Text encrypted and overwritten successfully!");
+                        }
+                        else if (option == "2")
+                        {
+                            File.AppendAllText(userFile, encryptedHex + Environment.NewLine);
+                            Console.WriteLine("Text encrypted and appended successfully!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid option. Encryption canceled.");
+                        }
+                    }
+                    else
+                    {
+                        File.WriteAllText(userFile, encryptedHex + Environment.NewLine);
+                        Console.WriteLine("Text encrypted and saved successfully!");
+                    }
+
                     Console.WriteLine($"Encrypted: {encryptedHex}");
                     Console.WriteLine("Press any key to continue...");
                     Console.ReadKey();
@@ -377,17 +398,14 @@ namespace SecureAuthSystem
 
             string newHash = HashPassword(newPassword);
 
-            // Update user data in file
             string[] users = File.ReadAllLines("users.txt");
             for (int i = 0; i < users.Length; i++)
             {
                 string[] parts = users[i].Split('|');
                 if (parts.Length >= 3 && parts[1] == user.Email)
                 {
-                    // Reconstruct user data with new password
                     string newUserData = $"{parts[0]}|{parts[1]}|{newHash}";
 
-                    // Add keys if they exist
                     if (parts.Length > 3) newUserData += $"|{parts[3]}";
                     if (parts.Length > 4) newUserData += $"|{parts[4]}";
 
@@ -398,7 +416,6 @@ namespace SecureAuthSystem
 
             File.WriteAllLines("users.txt", users);
 
-            // Update the current user object
             user.PasswordHash = newHash;
 
             Console.WriteLine("Password changed successfully! Press any key to continue...");
@@ -410,13 +427,11 @@ namespace SecureAuthSystem
             using (SHA256 sha256 = SHA256.Create())
             {
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-
                 StringBuilder builder = new StringBuilder();
                 for (int i = 0; i < bytes.Length; i++)
                 {
                     builder.Append(bytes[i].ToString("x2"));
                 }
-
                 return builder.ToString();
             }
         }

@@ -12,3 +12,10 @@ C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\S
 C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.csproj.CoreCompileInputs.cache
 C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.exe
 C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.pdb
+C:\Users\EL10_gazy\Desktop\Security_\SecureApplicationApp\bin\Debug\SecureApplicationApp.exe.config
+C:\Users\EL10_gazy\Desktop\Security_\SecureApplicationApp\bin\Debug\SecureApplicationApp.exe
+C:\Users\EL10_gazy\Desktop\Security_\SecureApplicationApp\bin\Debug\SecureApplicationApp.pdb
+C:\Users\EL10_gazy\Desktop\Security_\SecureApplicationApp\obj\Debug\SecureApplicationApp.csproj.AssemblyReference.cache
+C:\Users\EL10_gazy\Desktop\Security_\SecureApplicationApp\obj\Debug\SecureApplicationApp.csproj.CoreCompileInputs.cache
+C:\Users\EL10_gazy\Desktop\Security_\SecureApplicationApp\obj\Debug\SecureApplicationApp.exe
+C:\Users\EL10_gazy\Desktop\Security_\SecureApplicationApp\obj\Debug\SecureApplicationApp.pdb

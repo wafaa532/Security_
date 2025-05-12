@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\EL10_gazy\\Desktop\\Security_\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87819-04CB-460E-9021-BA36FCAA89D0}|SecureApplicationApp\\SecureApplicationApp.csproj|c:\\users\\el10_gazy\\desktop\\security_\\secureapplicationapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87819-04CB-460E-9021-BA36FCAA89D0}|SecureApplicationApp\\SecureApplicationApp.csproj|solutionrelative:secureapplicationapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\EL10_gazy\\Desktop\\Security_\\SecureApplicationApp\\Program.cs",
+              "RelativeDocumentMoniker": "SecureApplicationApp\\Program.cs",
+              "ToolTip": "C:\\Users\\EL10_gazy\\Desktop\\Security_\\SecureApplicationApp\\Program.cs",
+              "RelativeToolTip": "SecureApplicationApp\\Program.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAuwBQBAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:18:34.867Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
