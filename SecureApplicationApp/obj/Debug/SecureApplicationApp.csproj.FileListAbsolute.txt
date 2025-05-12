@@ -1,0 +1,14 @@
+C:\Users\EL-Bustan\Desktop\learn c#\SecureApplicationApp\SecureApplicationApp\bin\Debug\SecureApplicationApp.exe.config
+C:\Users\EL-Bustan\Desktop\learn c#\SecureApplicationApp\SecureApplicationApp\bin\Debug\SecureApplicationApp.exe
+C:\Users\EL-Bustan\Desktop\learn c#\SecureApplicationApp\SecureApplicationApp\bin\Debug\SecureApplicationApp.pdb
+C:\Users\EL-Bustan\Desktop\learn c#\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.csproj.AssemblyReference.cache
+C:\Users\EL-Bustan\Desktop\learn c#\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.csproj.CoreCompileInputs.cache
+C:\Users\EL-Bustan\Desktop\learn c#\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.exe
+C:\Users\EL-Bustan\Desktop\learn c#\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.pdb
+C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\bin\Debug\SecureApplicationApp.exe.config
+C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\bin\Debug\SecureApplicationApp.exe
+C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\bin\Debug\SecureApplicationApp.pdb
+C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.csproj.AssemblyReference.cache
+C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.csproj.CoreCompileInputs.cache
+C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.exe
+C:\Users\EL10_gazy\Desktop\SecureApplicationApp\SecureApplicationApp\obj\Debug\SecureApplicationApp.pdb
